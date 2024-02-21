@@ -1,5 +1,8 @@
+@use '../../../styles/partials/variables.scss' as *;
+@use '../../../styles/partials/mixins.scss' as *;
+
 * {
-    border: 1px dotted red;
+    // border: 1px dotted red;
     box-sizing: border-box;
 }
 
@@ -17,32 +20,66 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin-top: 16px;
+
 
         &--box {
-            width: 80%;
+            width: 82%;
             border-radius: 5px;
-        }
-        &--picture {
-            height: 25px;
-            width: 25px;
-            background-image: url("../../../assets/images/Mohan-muruge.jpg");
-            background-size: cover;
-            border-radius: 50%;
-        }
-    }
-    &__upload {
-        width: 100%;
-        background-color: blue;
-        display: flex;
-        height: 30px;
+            height: 36px;
+            border: 1px solid $Silver;
 
-        &--upload {
-            height: 20px;
-            margin: 0px;
         }
-        &--icon {
-            height: fit-content;
+        
+    }
+    &__picture1 {
+        height: 36px;
+        width: 36px;
+        background-image: url("../../../assets/images/Mohan-muruge.jpg");
+        background-size: cover;
+        border-radius: 50%;
+    }
+    &__picture2 {
+        display: none;
+    }
+
+    &__upload {
+
+        &--button {
+            position: relative; 
+            width: 100%;
+            background-color: $BrainFlix-Blue;
+            display: flex;
+            min-height: 36px;
+            align-items: center;
+            padding: 0 10px; 
+            margin-top: 16px;
+            border-radius: 5px;
+
+            &--icon {
+                height: fit-content;
+                margin-right: 8px; 
+                height: 20px;
+                width: 20px;
+            }
+
+            &--upload {
+                position: absolute; 
+                top: 50%; 
+                left: 50%; 
+                transform: translate(-50%, -50%); 
+                margin: 0; 
+                color: $White;
+            }
         }
+        
+
+        
+        
+
+    }
+
+    @include tablet {
 
     }
 }
