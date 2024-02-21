@@ -1,0 +1,48 @@
+* {
+    border: 1px dotted red;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+
+    &__logo {
+
+    }
+    &__search {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &--box {
+            width: 80%;
+            border-radius: 5px;
+        }
+        &--picture {
+            height: 25px;
+            width: 25px;
+            background-image: url("../../../assets/images/Mohan-muruge.jpg");
+            background-size: cover;
+            border-radius: 50%;
+        }
+    }
+    &__upload {
+        width: 100%;
+        background-color: blue;
+        display: flex;
+        height: 30px;
+
+        &--upload {
+            height: 20px;
+            margin: 0px;
+        }
+        &--icon {
+            height: fit-content;
+        }
+
+    }
+}
