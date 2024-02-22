@@ -1,9 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Component/Navbar/Navbar';
 
 function App() {
-  return (
+  return (//
     <div className="App">
       < Navbar />
     </div>

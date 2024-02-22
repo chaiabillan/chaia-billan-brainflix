@@ -2,36 +2,32 @@
 @use '../../../styles/partials/mixins.scss' as *;
 
 * {
-    // border: 1px dotted red;
+    border: 1px dotted red;
     box-sizing: border-box;
 }
 
 .nav-bar {
     width: 100%;
-    height: 100px;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     padding: 16px;
 
-    &__logo {
-
-    }
     &__search {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         margin-top: 16px;
 
-
         &--box {
             width: 82%;
             border-radius: 5px;
             height: 36px;
             border: 1px solid $Silver;
-
         }
         
     }
+
     &__picture1 {
         height: 36px;
         width: 36px;
@@ -41,6 +37,11 @@
     }
     &__picture2 {
         display: none;
+        height: 36px;
+        width: 36px;
+        background-image: url("../../../assets/images/Mohan-muruge.jpg");
+        background-size: cover;
+        border-radius: 50%;
     }
 
     &__upload {
@@ -71,15 +72,43 @@
                 margin: 0; 
                 color: $White;
             }
-        }
-        
-
-        
-        
+        } 
 
     }
 
     @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 70px;
 
+        &__logo {
+            align-content: center;
+        }
+        &__right {
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+        }
+
+        &__upload {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: space-evenly;
+            &--button {
+                width: 150px;
+                margin-right: 16px;
+            }
+        }
+
+        &__picture1 {
+            display: none;
+        }
+
+        &__picture2 {
+            display: flex;
+            height: 42px;
+            width: 42px;
+        }
     }
 }
