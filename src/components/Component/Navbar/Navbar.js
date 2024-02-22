@@ -10,20 +10,25 @@ function Navbar() {
             <img src={logo} alt="logo"/>
         </div>
         <div className= "nav-bar__right">
-            <div className = "nav-bar__search">
-                <input className="nav-bar__search--box"type="text" name="search" placeholder="Search"></input>
-                <span className="nav-bar__picture1"></span>
-            </div>
-            <div className = "nav-bar__upload">
-                <div className = "nav-bar__upload--button">
-                        <img className="nav-bar__upload--button--icon"src={upload} alt="upload-icon" />            
-                        <p className="nav-bar__upload--button--upload">UPLOAD</p>
+            <div className = "nav-bar__middle">
+                <div className = "nav-bar__middle--search">
+                    {/* <i className="fa fa-search" aria-hidden="true"></i> */}
+                    <input className="nav-bar__middle--search--box"type="text" name="search" placeholder="Search"></input>
                 </div>
+                <div className="nav__bar__middle--picture">
+                    <span className="nav-bar__picture1"></span>
+                </div>
+            </div>
+            <div className = "nav-bar__bottom">
+                <div className = "nav-bar__bottom--button">
+                        <img className="nav-bar__bottom--button--icon"src={upload} alt="upload-icon" />            
+                        <p className="nav-bar__bottom--button--upload">UPLOAD</p>
+                </div>
+                <div className="nav-bar__bottom--picture">
                     <span className="nav-bar__picture2"></span>
+                </div>
             </div>
         </div>
-        
-        
     </nav>
     )
 }

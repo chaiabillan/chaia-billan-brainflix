@@ -2,10 +2,18 @@
 @use '../../../styles/partials/mixins.scss' as *;
 
 * {
-    border: 1px dotted red;
+    // border: 1px dotted red;
     box-sizing: border-box;
 }
-
+.search-icon {
+    position: absolute;
+    left: 10px; // Adjust this value according to your icon position
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; // Adjust this value according to your icon size
+    height: 20px; // Adjust this value according to your icon size
+    fill: #888; // Adjust this value according to your icon color
+}
 .nav-bar {
     width: 100%;
     height: fit-content;
@@ -13,27 +21,55 @@
     flex-direction: column;
     padding: 16px;
 
-    &__search {
+    &__middle {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         margin-top: 16px;
+    
+        &--search {
+            width: 100%;
+            
+            &--box {
+                width: 100%;
+                border-radius: 4px;
+                height: 36px;
+                border: 1px solid $Silver;
+                padding: 4px;
+                background-repeat: none;
+                background-position: 10px center;
+                background-color: $Alabaster;
 
-        &--box {
-            width: 82%;
-            border-radius: 5px;
-            height: 36px;
-            border: 1px solid $Silver;
+
+                &:focus {
+                    border: 2px solid $BrainFlix-Blue;
+                    outline: none;
+                }
+    
+                &.error {
+                    border: 2px solid red;
+                    outline: none;
+                }
+            }
+
+            &--picture {
+                width: fit-content;
+            }
+            
+            
         }
-        
     }
+    
 
     &__picture1 {
+        display: flex;
         height: 36px;
         width: 36px;
         background-image: url("../../../assets/images/Mohan-muruge.jpg");
         background-size: cover;
         border-radius: 50%;
+        margin-left: 16px;
+
     }
     &__picture2 {
         display: none;
@@ -44,7 +80,7 @@
         border-radius: 50%;
     }
 
-    &__upload {
+    &__bottom {
 
         &--button {
             position: relative; 
@@ -55,7 +91,8 @@
             align-items: center;
             padding: 0 10px; 
             margin-top: 16px;
-            border-radius: 5px;
+            border-radius: 4px;
+            // padding: 4px;
 
             &--icon {
                 height: fit-content;
@@ -81,16 +118,29 @@
         justify-content: space-between;
         height: 70px;
 
-        &__logo {
-            align-content: center;
+        &__left {
+            display: flex;
+            align-items: center;
+            margin-left: 16px;
         }
+       
         &__right {
             display: flex;
             flex-direction: row;
             align-items: end;
+            margin-right: 16px;
         }
 
-        &__upload {
+        &__middle {
+            &--search {
+                &--box {
+                    height: 40px;
+                    width: 240px;
+                }
+            }
+        }
+        
+        &__bottom {
             display: flex;
             flex-direction: row;
             align-items: flex-end;
@@ -98,6 +148,8 @@
             &--button {
                 width: 150px;
                 margin-right: 16px;
+                height: 40px;
+                margin-left: 16px;
             }
         }
 
@@ -107,8 +159,15 @@
 
         &__picture2 {
             display: flex;
-            height: 42px;
-            width: 42px;
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    @include desktop {
+        &__bottom--button {
+            margin-left: 32px;
+            margin-right: 40px;
         }
     }
 }
