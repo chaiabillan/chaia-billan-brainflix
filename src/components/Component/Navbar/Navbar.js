@@ -13,7 +13,7 @@ function Navbar() {
             <div className = "nav-bar__middle">
                 <div className = "nav-bar__middle--search">
                     {/* <i className="fa fa-search" aria-hidden="true"></i> */}
-                    <input className="nav-bar__middle--search--box"type="text" name="search" placeholder="Search"></input>
+                    <input className="nav-bar__middle--search--box regular"type="text" name="search" placeholder="Search"></input>
                 </div>
                 <div className="nav__bar__middle--picture">
                     <span className="nav-bar__picture1"></span>
@@ -22,7 +22,7 @@ function Navbar() {
             <div className = "nav-bar__bottom">
                 <div className = "nav-bar__bottom--button">
                         <img className="nav-bar__bottom--button--icon"src={upload} alt="upload-icon" />            
-                        <p className="nav-bar__bottom--button--upload">UPLOAD</p>
+                        <p className="nav-bar__bottom--button--upload demi">UPLOAD</p>
                 </div>
                 <div className="nav-bar__bottom--picture">
                     <span className="nav-bar__picture2"></span>
