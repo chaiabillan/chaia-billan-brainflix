@@ -13,7 +13,6 @@ function App() {
   const currentVideoDetails = currentVideoData[1];
   const currentVideoComments = currentVideoData[1];
   const nextVideo = nextVideoData;
-  console.log([nextVideoData]);
 
   return (//
     <div className="App">

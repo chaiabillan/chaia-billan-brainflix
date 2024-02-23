@@ -1,0 +1,74 @@
+@use '../../../styles/partials/variables' as *;
+@use '../../../styles/partials/mixins.scss' as *;
+
+* {
+    // border: 1px dotted red;
+    box-sizing: border-box;
+}
+
+.App {
+    text-align: left;
+}
+
+.video-next {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+    &__title {
+        // display: flex;
+        // justify-content: flex-start;
+        color: $Silver;
+    }
+
+    &__options {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__indiv {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding-bottom: 8px;
+
+        &--image {
+        
+            &--src {
+                height: 60px;
+                width: 100px;
+                border-radius: 4px;
+            }
+        }
+
+        &--text {
+            display: flex;
+            flex-direction: column;
+            // align-items: flex-start;
+            height: 60px;
+            // justify-content: flex-start;
+            // align-content: flex-start;
+            align-items: flex-start; 
+            padding-left: 16px;           
+
+            &--title {
+                display: flex;
+                font-size: 13px;
+                // flex-direction: column;
+                // align-items: flex-start;
+                margin: 0px;
+                justify-content: flex-start;
+            }
+
+            &--channel {
+                display: flex;
+                font-size: 13px;
+                margin: 0px;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
