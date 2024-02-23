@@ -2,7 +2,7 @@
 @use '../../../styles/partials/mixins.scss' as *;
 
 * {
-    // border: 1px dotted red;
+    border: 1px dotted red;
     box-sizing: border-box;
 }
 
@@ -47,27 +47,26 @@
         &--text {
             display: flex;
             flex-direction: column;
-            // align-items: flex-start;
             height: 60px;
-            // justify-content: flex-start;
-            // align-content: flex-start;
             align-items: flex-start; 
-            padding-left: 16px;           
+            padding-left: 16px;     
+            flex: 1;      
 
             &--title {
                 display: flex;
                 font-size: 13px;
-                // flex-direction: column;
-                // align-items: flex-start;
                 margin: 0px;
                 justify-content: flex-start;
+                flex-direction: column;
             }
 
             &--channel {
                 display: flex;
                 font-size: 13px;
                 margin: 0px;
+                margin-top: auto;
                 justify-content: flex-end;
+                flex-direction: column;
             }
         }
     }
