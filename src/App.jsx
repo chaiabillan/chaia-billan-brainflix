@@ -3,11 +3,13 @@ import Navbar from './components/Component/Navbar/Navbar';
 import VideoPlayer from './components/Component/VideoPlayer/VideoPlayer';
 import currentVideoData from './data/video-details.json'
 import VideoPlayerDetails from './components/Component/VideoPlayerDetails/VideoPlayerDetails';
+import VideoPlayerComments from './components/Component/VideoPlayerComments/VideoPlayerComments';
 
 function App() {
 
-  const currentVideo = currentVideoData[0];
-  const currentVideoDetails = currentVideoData[0];
+  const currentVideo = currentVideoData[1];
+  const currentVideoDetails = currentVideoData[1];
+  const currentVideoComments = currentVideoData[1];
 
 
   return (//
@@ -18,6 +20,9 @@ function App() {
       />
       <VideoPlayerDetails 
       currentVideoDetails={currentVideoDetails}
+      />
+      <VideoPlayerComments 
+      currentVideoComments={currentVideoComments}
       />
     </div>
   );
