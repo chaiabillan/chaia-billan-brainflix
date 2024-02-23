@@ -12,7 +12,8 @@ function App() {
   const currentVideo = currentVideoData[1];
   const currentVideoDetails = currentVideoData[1];
   const currentVideoComments = currentVideoData[1];
-  const nextVideo = nextVideoData[1];
+  const nextVideo = nextVideoData;
+  console.log([nextVideoData]);
 
   return (//
     <div className="App">
@@ -27,7 +28,7 @@ function App() {
       currentVideoComments={currentVideoComments}
       />
       <VideoNext 
-      nextVideo={nextVideo}
+      nextVideo={nextVideo} //this holds the next video data
       />
     </div>
   );
