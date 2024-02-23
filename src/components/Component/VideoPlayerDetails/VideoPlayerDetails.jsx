@@ -29,7 +29,7 @@ function VideoPlayerDetails({currentVideoDetails}) {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className = "video-details__description regular">
                 {description}
             </div>
         </section>

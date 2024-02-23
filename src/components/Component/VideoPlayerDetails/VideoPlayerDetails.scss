@@ -2,7 +2,7 @@
 @use '../../../styles/partials/mixins.scss' as *;
 
 * {
-    border: 1px dotted red;
+    // border: 1px dotted red;
     box-sizing: border-box;
 }
 
@@ -10,15 +10,58 @@
     padding: 16px;
 
     &__title {
-        height: 100px;
+        // height: 100px;
 
         &--text {
             font-size: 24px;
             line-height: 32px;
+            margin: 0px;
+            padding-bottom: 16px;
         }   
     }
 
     &__info {
-        
+        display: flex;
+        border-top: 1px $Mercury solid;
+        border-bottom: 1px $Mercury solid;
+        padding: 16px 0px 16px 0px;
+
+        &--left {
+            padding-right: 32px;
+
+            &--channel {
+                font-size: 14px;
+                margin: 0px;
+                padding-bottom: 12px;
+            }
+
+            &--date {
+                font-size: 14px;
+                margin: 0px;
+                color: $Silver;
+            }
+        }
+
+        &--right {
+
+            &--views {
+                font-size: 14px;
+                color: $Silver;
+                padding-bottom: 12px;
+            }
+
+            &--likes {
+                font-size: 14px;
+                color: $Silver;
+
+
+            }
+        }
+    }
+
+    &__description {
+        font-size: 13px;
+        line-height: 18px;
+        padding-top: 16px;
     }
 }
