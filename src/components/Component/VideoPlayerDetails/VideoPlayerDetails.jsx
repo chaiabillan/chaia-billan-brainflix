@@ -1,4 +1,4 @@
-import './VideoPlayerDetails'
+import './VideoPlayerDetails.scss'
 
 function VideoPlayerDetails({currentVideoDetails}) {
     const {
@@ -11,20 +11,20 @@ function VideoPlayerDetails({currentVideoDetails}) {
     } = currentVideoDetails;
 
     return (
-        <section>
-            <div>
-                <h1>{title}</h1>
+        <section className = "video-details">
+            <div className = "video-details__title">
+                <h1 className = "video-details__title--text bold">{title}</h1>
             </div>
-            <div>
-                <div>
-                    <h2>By {channel}</h2>
-                    <p>{timestamp}</p>
+            <div className ="video-details__info">
+                <div className ="video-details__info--left">
+                    <h2 className ="video-details__info--left--channel demi">By {channel}</h2>
+                    <p className ="video-details__info--left--date normal">{timestamp}</p>
                 </div>
-                <div>
-                    <div>
+                <div className ="video-details__info--right">
+                    <div className ="video-details__info--right--views normal">
                         {views}
                     </div>
-                    <div>
+                    <div className ="video-details__info--right--likes normal">
                         {likes}
                     </div>
                 </div>

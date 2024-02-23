@@ -9,9 +9,9 @@ import VideoNext from './components/Component/VideoNext/VideoNext';
 
 function App() {
 
-  const currentVideo = currentVideoData[1];
-  const currentVideoDetails = currentVideoData[1];
-  const currentVideoComments = currentVideoData[1];
+  const currentVideo = currentVideoData[0];
+  const currentVideoDetails = currentVideoData[0];
+  const currentVideoComments = currentVideoData[0];
   const nextVideo = nextVideoData;
 
   return (//

@@ -1,0 +1,24 @@
+@use '../../../styles/partials/variables' as *;
+@use '../../../styles/partials/mixins.scss' as *;
+
+* {
+    border: 1px dotted red;
+    box-sizing: border-box;
+}
+
+.video-details {
+    padding: 16px;
+
+    &__title {
+        height: 100px;
+
+        &--text {
+            font-size: 24px;
+            line-height: 32px;
+        }   
+    }
+
+    &__info {
+        
+    }
+}
