@@ -3,10 +3,6 @@ import './VideoPlayerComments.scss'
 function VideoPlayerComments({currentVideoData}) {
     const {
         comments
-        // name, 
-        // comment, 
-        // likes, 
-        // timestamp
     } = currentVideoData;
 
     return (

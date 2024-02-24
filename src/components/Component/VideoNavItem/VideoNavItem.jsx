@@ -1,10 +1,10 @@
 import './VideoNavItem.scss';
 
-function VideoNavItem ( { video, activeVideo, updateActiveVideo } ) {
+function VideoNavItem ( { video, isActive, updateActiveVideo } ) {
     
     let className = "video-next__indiv";
     if (isActive) {
-        className += "video-next__indiv--selected";
+        className += " video-next__indiv--selected";
     }
 
     const handleClick = () => {
@@ -12,7 +12,7 @@ function VideoNavItem ( { video, activeVideo, updateActiveVideo } ) {
     }
     
     return (
-        <li onClick = {handleClick} className={className} key={video.id}>
+        <div onClick = {handleClick} className={className}>
             <div className="video-next__indiv--image">
                 <img className="video-next__indiv--image--src" src={video.image} alt={video.title} />
             </div>
@@ -20,7 +20,7 @@ function VideoNavItem ( { video, activeVideo, updateActiveVideo } ) {
                 <h3 className="video-next__indiv--text--title demi">{video.title}</h3>
                 <p className="video-next__indiv--text--channel regular">{video.channel}</p>
             </div>
-        </li>
+        </div>
     )
 }
 

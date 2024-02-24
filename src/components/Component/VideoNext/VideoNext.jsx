@@ -1,15 +1,7 @@
+import VideoNavItem from '../VideoNavItem/VideoNavItem';
 import './VideoNext.scss'
 
-// function VideoNext(props) {
-function VideoList({VideoList}) {
-
-    // const nextVideo = props.nextVideo;
-    const {
-        // id,
-        // image,
-        // title,
-        // channel
-    } = VideoList;
+function VideoList({ videoList, activeVideo, updateActiveVideo }) {
 
     return (
         <section className ="video-next">
@@ -17,20 +9,18 @@ function VideoList({VideoList}) {
                 NEXT VIDEOS
             </p>
             <div className="video-next__options">
-                {/* {nextVideo.map((video) => {
+                {videoList.map((video) => {
                         return (
-                            <div className="video-next__indiv"key={video.id}>
-                                <div className="video-next__indiv--image">
-                                    <img className="video-next__indiv--image--src" src={video.image} alt={video.title} />
-                                </div>
-                                <div className="video-next__indiv--text">
-                                        <h3 className="video-next__indiv--text--title demi">{video.title}</h3>
-                                        <p className="video-next__indiv--text--channel regular">{video.channel}</p>
-                                </div>
-                            </div>
+                            <VideoNavItem
+                                key={video.id}
+                                video={video}
+                                parentClass="video-next__options"
+                                isActive={video.id === activeVideo.id}
+                                updateActiveVideo={updateActiveVideo}
+                            />
                         );
                     })
-                } */}
+                }
             </div>
         </section>
     )

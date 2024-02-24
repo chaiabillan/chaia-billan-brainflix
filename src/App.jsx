@@ -9,7 +9,6 @@ import VideoList from './components/Component/VideoNext/VideoNext';
 import React, { useState } from 'react';
 
 function App() {
-  // const currentVideo = currentVideoData[0];
 
   const [activeVideo, setActiveVideo] = useState(currentVideoData[0]);
 
@@ -19,9 +18,7 @@ function App() {
     setActiveVideo(newActiveVideo);
   }
 
-  // const nextVideo = nextVideoData;
-
-  return (//
+  return (
     <div className="App">
       < Navbar />
       < VideoPlayer
@@ -34,12 +31,14 @@ function App() {
       currentVideoData={activeVideo}
       />
       <VideoList 
-      VideoList={nextVideoData} //this holds the next video data
+      videoList={nextVideoData} 
       activeVideo={activeVideo}
       updateActiveVideo={updateActiveVideo}
       />
     </div>
+    
   );
+  
 }
 
 export default App;
