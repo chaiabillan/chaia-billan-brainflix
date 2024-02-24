@@ -52,9 +52,7 @@ function VideoPlayerComments({currentVideoData}) {
 
                         
                         
-                        {/* <p className="comment-likes">
-                            {comment.likes} likes
-                        </p> */}
+                        
                         
                     </div>
                 ))}
