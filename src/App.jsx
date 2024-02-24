@@ -5,29 +5,38 @@ import currentVideoData from './data/video-details.json'
 import nextVideoData from './data/videos.json'
 import VideoPlayerDetails from './components/Component/VideoPlayerDetails/VideoPlayerDetails';
 import VideoPlayerComments from './components/Component/VideoPlayerComments/VideoPlayerComments';
-import VideoNext from './components/Component/VideoNext/VideoNext';
+import VideoList from './components/Component/VideoNext/VideoNext';
+import React, { useState } from 'react';
 
 function App() {
+  // const currentVideo = currentVideoData[0];
 
-  const currentVideo = currentVideoData[0];
-  const currentVideoDetails = currentVideoData[0];
-  const currentVideoComments = currentVideoData[0];
-  const nextVideo = nextVideoData;
+  const [activeVideo, setActiveVideo] = useState(currentVideoData[0]);
+
+  function updateActiveVideo ( clickedID ) {
+    const newActiveVideo = currentVideoData.find((video) => video.id === clickedID)
+
+    setActiveVideo(newActiveVideo);
+  }
+
+  // const nextVideo = nextVideoData;
 
   return (//
     <div className="App">
       < Navbar />
       < VideoPlayer
-      currentVideo={currentVideo}
+      currentVideoData={activeVideo}
       />
       <VideoPlayerDetails 
-      currentVideoDetails={currentVideoDetails}
+      currentVideoData={activeVideo}
       />
       <VideoPlayerComments 
-      currentVideoComments={currentVideoComments}
+      currentVideoData={activeVideo}
       />
-      <VideoNext 
-      nextVideo={nextVideo} //this holds the next video data
+      <VideoList 
+      VideoList={nextVideoData} //this holds the next video data
+      activeVideo={activeVideo}
+      updateActiveVideo={updateActiveVideo}
       />
     </div>
   );

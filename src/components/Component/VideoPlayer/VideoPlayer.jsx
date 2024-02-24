@@ -1,10 +1,11 @@
 import './VideoPlayer.scss' 
 
-function VideoPlayer({currentVideo}) {
+function VideoPlayer({currentVideoData}) {
     const {
         image, 
         duration
-    } = currentVideo;
+    } = currentVideoData;
+
 
     return (
         <section className="video-player">

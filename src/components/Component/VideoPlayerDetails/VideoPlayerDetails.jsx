@@ -1,6 +1,6 @@
 import './VideoPlayerDetails.scss'
 
-function VideoPlayerDetails({currentVideoDetails}) {
+function VideoPlayerDetails({currentVideoData}) {
     const {
         title, 
         channel, 
@@ -8,7 +8,7 @@ function VideoPlayerDetails({currentVideoDetails}) {
         views, 
         likes, 
         description
-    } = currentVideoDetails;
+    } = currentVideoData;
 
     return (
         <section className = "video-details">
