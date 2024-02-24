@@ -10,7 +10,6 @@
     padding: 16px;
 
     &__title {
-        // height: 100px;
 
         &--text {
             font-size: 24px;
@@ -48,13 +47,21 @@
                 font-size: 14px;
                 color: $Silver;
                 padding-bottom: 12px;
+                display: flex;
+
+                &--icon {
+                    padding-right: 8px;
+                }
             }
 
             &--likes {
                 font-size: 14px;
                 color: $Silver;
+                display: flex;
 
-
+                &--icon {
+                    padding-right: 8px;
+                }
             }
         }
     }
@@ -63,5 +70,51 @@
         font-size: 13px;
         line-height: 18px;
         padding-top: 16px;
+    }
+
+    @include tablet {
+        padding: 32px;
+
+        &__title {
+
+            &--text {
+                font-size: 33px;
+                line-height: 44px;
+            }
+        }
+
+        &__info {
+            justify-content: space-between;
+            border-top: none;
+            padding: 0px;
+
+            &--left {
+                display: flex;
+
+                &--channel {
+                    padding-right: 32px;
+                }
+            }
+
+            &--right {
+                display: flex;
+
+                &--views {
+                    padding-right: 32px;
+                }
+
+                &--likes {
+
+                    &--icon {
+                        height: fit-content;
+                    }
+                }
+            }
+        }
+
+        &__description {
+            font-size: 14px;
+            line-height: 22px;
+        }
     }
 }
