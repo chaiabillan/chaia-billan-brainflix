@@ -1,4 +1,5 @@
 import './VideoPlayerComments.scss'
+import comment from '../../../assets/images/Icons/add_comment.svg'
 
 function VideoPlayerComments({currentVideoData}) {
     const {
@@ -17,13 +18,15 @@ function VideoPlayerComments({currentVideoData}) {
                     <span class="comment__picture--icon comment__picture--icon--mohan"></span>
                 </div>
                 <form id = "add-comment-form" class="comment__form">
-                        <label class="comment__form--label comment__form--comment regular">
+                        <label class="comment__form--label comment__form--comment demi">
                             JOIN THE CONVERSATION
                         </label>
-                        <textarea class="comment__form--field comment__form--field--comment regular" type="text" name="comment" placeholder="Add a new comment"></textarea>
-                        
-                        <div class="comment__form--button">
-                            <button class="comment__form--button--content regular" type="submit">COMMENT</button>
+                        <div className='comment__form--field--tablet'>
+                            <textarea class="comment__form--field comment__form--field--comment regular" type="text" name="comment" placeholder="Add a new comment"></textarea>
+                            
+                            <div class="comment__form--button">
+                                <button class="comment__form--button--content demi" type="submit"><img className="comment__form--button--content--icon" src={comment}/>COMMENT</button>
+                            </div>
                         </div>
                         <div class="comment__form--bottom">
                             <p class="comment__form--bottom--error regular" id="add-comment-form-errors"></p> 

@@ -36,7 +36,7 @@
             top: 21px;
 
             &--mohan {
-                // background-image: url("../assets/images/Mohan-muruge.jpg");
+                background-image: url("../../../assets/images/Mohan-muruge.jpg");
                 background-size: cover;
             }
         }
@@ -63,6 +63,7 @@
             border-radius: 4px;
             font-size: 13px;
             line-height: 18px;
+            width: 100%;
 
             &::placeholder {
                 color: $BrainFlix-DarkBlack;
@@ -71,19 +72,32 @@
 
             &--comment {
                 padding-bottom: 50px;
+                margin-bottom: 0px;
             }
         }
         
         &--button {
 
             &--content {
-                background-color: $BrainFlix-Black;
-                color: $White;
-                border-radius: 4px;
-                padding: 8px;
-                font-size: 13px;
-                line-height: 18px;
+                position: relative; 
                 width: 100%;
+                background-color: $BrainFlix-Blue;
+                display: flex;
+                min-height: 36px;
+                align-items: center;
+                padding: 0 10px; 
+                margin-top: 16px;
+                border-radius: 4px;
+                border: none;
+                color: $White;
+
+            &--icon {
+                height: fit-content;
+                margin-right: 50px; 
+                height: 20px;
+                width: 20px;
+
+            }
             }
             
         }
@@ -115,9 +129,9 @@
     }
 
     @include tablet {
-        padding: 16px 16px 0px 16px;
-        margin-right: 64px;
-        margin-left: 64px;
+        padding: 16px 0px 0px 0px;
+        margin-right: 32px;
+        margin-left: 32px;
 
         &--posted {
             padding-bottom: 16px;
@@ -141,17 +155,37 @@
             &--field {
                 font-size: 14px;
                 line-height: 22px;
+                margin-right: 24px;
 
                 &--comment {
-                    padding-bottom: 39px;
+                    padding-bottom: 0px;
+                    height: 45px;
+                }
+
+                &--tablet {
+                    display: flex;
                 }
             }
 
             &--button {
                 display: flex;
-                justify-content: flex-end;
+                // justify-content: flex-end;
+                // width: 55px;
+                // min-width: 70px; 
+
                 &--content {
-                    width: 30%;   
+                    width: auto;                    
+                    flex-grow: 1;
+                    font-size: 12px;
+                    padding-right: 10px;
+                    position: relative;
+                    margin-top: 0px;
+                    
+                    &--icon {
+                        // margin-right: 14px;
+                        height: 18px;
+                        width: 18px;
+                    }
                 }
             }
         }
