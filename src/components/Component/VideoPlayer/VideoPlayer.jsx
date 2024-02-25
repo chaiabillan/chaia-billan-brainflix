@@ -9,12 +9,8 @@ function VideoPlayer({currentVideoData}) {
 
     return (
         <section className="video-player">
-            <img className="video-player__image" src={image}/>
-            <div>
-                <div>
-                    {duration}
-                </div>
-            </div>
+            <video className="video-player__image" poster={image} controls></video>
+            <div>{duration}</div>
         </section>
     )
 }

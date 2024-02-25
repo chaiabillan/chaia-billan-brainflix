@@ -17,6 +17,7 @@ function VideoList({ videoList, activeVideo, updateActiveVideo }) {
                                 parentClass="video-next__options"
                                 isActive={video.id === activeVideo.id}
                                 updateActiveVideo={updateActiveVideo}
+                                isCurrentVideo={video.id === activeVideo.id}
                             />
                         );
                     })

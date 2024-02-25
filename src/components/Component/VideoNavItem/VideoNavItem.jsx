@@ -1,10 +1,15 @@
 import './VideoNavItem.scss';
 
-function VideoNavItem ( { video, isActive, updateActiveVideo } ) {
+function VideoNavItem ( { video, isActive, updateActiveVideo, isCurrentVideo } ) {
     
     let className = "video-next__indiv";
     if (isActive) {
         className += " video-next__indiv--selected";
+        //try to figur eout how to say that its not included in nav list 
+    }
+
+    if (isCurrentVideo) {
+        return null;
     }
 
     const handleClick = () => {
