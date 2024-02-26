@@ -1,3 +1,6 @@
+@use './styles/partials/mixins' as *;
+@use './styles/partials/variables' as *;
+
 .App {
   text-align: center;
 }
@@ -36,3 +39,26 @@
     transform: rotate(360deg);
   }
 }
+
+.bottom-half {
+  display: flex;
+  flex-direction: column;
+  
+
+  @include desktop {
+    flex-direction: row;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    &__left {
+      width: 75%;
+      border-right: 1px solid $Mercury;
+    }
+
+    &__right {
+      width: auto;
+
+    }
+  }
+}
+

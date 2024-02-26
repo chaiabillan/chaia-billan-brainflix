@@ -193,22 +193,26 @@
 
     @include desktop {
         padding: 16px 0px 0px 0px;
-        margin-right: 260px;
-        margin-left: 260px;
+        // margin-right: 260px;
+        // margin-left: 260px;
+        margin-right: 0px;
 
         &--posted {
             padding-bottom: 16px;
         }
 
-        &__form--button {
+        &__form {
+            padding-right: 32px;
+            &--button {
             padding-top: 8px;
             padding-bottom: 8px;
+            }
 
             &--content {
                 width: 35%;
             }
-        }
-    }
+            }
+        }   
 }
 
 

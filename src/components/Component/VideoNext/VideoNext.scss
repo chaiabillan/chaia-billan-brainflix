@@ -70,4 +70,10 @@
             }
         }
     }
+
+    @include desktop {
+        &__indiv {
+            padding-bottom: 24px;
+        }
+    }
 }

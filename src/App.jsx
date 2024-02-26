@@ -1,4 +1,5 @@
-import './App.css';
+// import './App.css';
+import './App.scss'
 import Navbar from './components/Component/Navbar/Navbar';
 import VideoPlayer from './components/Component/VideoPlayer/VideoPlayer';
 import currentVideoData from './data/video-details.json'
@@ -24,17 +25,25 @@ function App() {
       < VideoPlayer
       currentVideoData={activeVideo}
       />
-      <VideoPlayerDetails 
-      currentVideoData={activeVideo}
-      />
-      <VideoPlayerComments 
-      currentVideoData={activeVideo}
-      />
-      <VideoList 
-      videoList={nextVideoData} 
-      activeVideo={activeVideo}
-      updateActiveVideo={updateActiveVideo}
-      />
+      <div className='bottom-half'>
+        <div className='bottom-half__left'>
+          <VideoPlayerDetails 
+          currentVideoData={activeVideo}
+          />
+          <VideoPlayerComments 
+          currentVideoData={activeVideo}
+          />
+        </div>
+        <div className='bottom-half__right'>
+          <VideoList 
+          videoList={nextVideoData} 
+          activeVideo={activeVideo}
+          updateActiveVideo={updateActiveVideo}
+          />
+        </div>
+        
+      </div>
+      
     </div>
     
   );
