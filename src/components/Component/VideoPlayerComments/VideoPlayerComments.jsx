@@ -49,11 +49,6 @@ function VideoPlayerComments({currentVideoData}) {
                                 <p class="posts__content--inside regular">{comment.comment}</p>
                             </div>
                         </div>    
-
-                        
-                        
-                        
-                        
                     </div>
                 ))}
             </div>
@@ -63,37 +58,3 @@ function VideoPlayerComments({currentVideoData}) {
 
 
 export default VideoPlayerComments
-
-
-    //   const formatTimestamp = (timestamp) => {
-    //     const date = new Date(timestamp);
-    //     const currentDate = new Date();
-    //     const timeDifference = currentDate - date;
-        
-    //     // Convert milliseconds to seconds
-    //     const seconds = Math.floor(timeDifference / 1000);
-        
-    //     // Define time intervals
-    //     const intervals = {
-    //         year: 31536000,
-    //         month: 2592000,
-    //         week: 604800,
-    //         day: 86400,
-    //         hour: 3600,
-    //         minute: 60
-    //     };
-
-    //     // Calculate time difference
-    //     let counter;
-    //     for (const [interval, secondsInterval] of Object.entries(intervals)) {
-    //         counter = Math.floor(seconds / secondsInterval);
-    //         if (counter > 0) {
-    //             if (counter === 1) {
-    //                 return `${counter} ${interval} ago`;
-    //             } else {
-    //                 return `${counter} ${interval}s ago`;
-    //             }
-    //         }
-    //     }
-    //     return 'Just now';
-    // };

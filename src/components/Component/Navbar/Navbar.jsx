@@ -12,7 +12,6 @@ function Navbar() {
         <div className= "nav-bar__right">
             <div className = "nav-bar__middle">
                 <div className = "nav-bar__middle--search">
-                    {/* <i className="fa fa-search" aria-hidden="true"></i> */}
                     <input className="nav-bar__middle--search--box regular"type="text" name="search" placeholder="Search"></input>
                 </div>
                 <div className="nav__bar__middle--picture">

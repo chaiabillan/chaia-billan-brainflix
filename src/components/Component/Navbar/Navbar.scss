@@ -6,15 +6,7 @@
     // border: 1px dotted red;
     box-sizing: border-box;
 }
-.search-icon {
-    position: absolute;
-    left: 10px; // Adjust this value according to your icon position
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px; // Adjust this value according to your icon size
-    height: 20px; // Adjust this value according to your icon size
-    fill: #888; // Adjust this value according to your icon color
-}
+
 .nav-bar {
     width: 100%;
     height: fit-content;
@@ -57,12 +49,9 @@
             &--picture {
                 width: fit-content;
             }
-            
-            
         }
     }
     
-
     &__picture1 {
         display: flex;
         height: 36px;
@@ -94,7 +83,6 @@
             padding: 0 10px; 
             margin-top: 16px;
             border-radius: 4px;
-            // padding: 4px;
 
             &--icon {
                 height: fit-content;
@@ -113,7 +101,6 @@
                 font-size: 0.8rem;
             }
         } 
-
     }
 
     @include tablet {
