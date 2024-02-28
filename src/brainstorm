@@ -8,21 +8,21 @@ Pages:
     - VideoPlayer
     - VideoPlayerDetails
     - VideoPlayerComments
-    - VideoNext
-    - VideoNavItem
+    - VideoNext 
+    - VideoNavItem 
 - Video Upload 
-    - Navbar
+    - Navbar 
 
 
 Using API to get data 
-- url/comments
-    - contains info for the navbaritem (breif overview of videodata)
-    - use this for VideoNavItem (which VideoNext will then compile)
-- url/comments/:id
-    - contains detailed info for a specified video
+- url/comments 
+    - contains info for the navbaritem (breif overview of videodata) 
+    - use this for VideoNavItem (which VideoNext will then compile) 
+- url/comments/:id 
+    - contains detailed info for a specified video 
     - use this info in the VideoDetails component 
-- url/comments/:id/comments
-    - contains the comments from said video
+- url/comments/:id/comments 
+    - contains the comments from said video 
     - use this info for the comment section 
 
 
