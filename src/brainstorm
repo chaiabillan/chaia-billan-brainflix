@@ -1,0 +1,67 @@
+App.js
+- navbar 
+- <Route path="/" element={<HomePage />} />
+
+Pages: 
+- Home (from the demo example, their first 3 pages are all combined here)
+    - Navbar 
+    - VideoPlayer
+    - VideoPlayerDetails
+    - VideoPlayerComments
+    - VideoNext
+    - VideoNavItem
+- Video Upload 
+    - Navbar
+
+
+Using API to get data 
+- url/comments
+    - contains info for the navbaritem (breif overview of videodata)
+    - use this for VideoNavItem (which VideoNext will then compile)
+- url/comments/:id
+    - contains detailed info for a specified video
+    - use this info in the VideoDetails component 
+- url/comments/:id/comments
+    - contains the comments from said video
+    - use this info for the comment section 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+so in order to make a separate "page" for each video
+    - this would mean that each video has a separate path 
+    - i think this path should depend on the video ID
+
+    need to have a video page that takes in all of the components that the home page is taking in right now. 
+
+    and so that means that the home page is just video[0]
+
+
+Video Details Page
+    - uses the same Page Component as Home Page
+    - although, they have two separate Routes
+        - 1. Home
+        - 2. A selected video 
+    - the route definiton for 2 could be the ID?
+
+    For the Home Page, the video that should be displayed is the first video within the array of videos.
+    For the Video Details Page, the video that should be displayed is the selected video within the array of videos.
+
+    

@@ -1,15 +1,16 @@
 // import './App.css';
 import './App.scss'
 import Navbar from './components/Component/Navbar/Navbar';
-import VideoPlayer from './components/Component/VideoPlayer/VideoPlayer';
-import currentVideoData from './data/video-details.json'
-import nextVideoData from './data/videos.json'
-import VideoPlayerDetails from './components/Component/VideoPlayerDetails/VideoPlayerDetails';
-import VideoPlayerComments from './components/Component/VideoPlayerComments/VideoPlayerComments';
-import VideoList from './components/Component/VideoNext/VideoNext';
-import React, { useState } from 'react';
+// import VideoPlayer from './components/Component/VideoPlayer/VideoPlayer';
+// import currentVideoData from './data/video-details.json'
+// import nextVideoData from './data/videos.json'
+// import VideoPlayerDetails from './components/Component/VideoPlayerDetails/VideoPlayerDetails';
+// import VideoPlayerComments from './components/Component/VideoPlayerComments/VideoPlayerComments';
+// import VideoList from './components/Component/VideoNext/VideoNext';
+// import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
+
 
 function App() {
 

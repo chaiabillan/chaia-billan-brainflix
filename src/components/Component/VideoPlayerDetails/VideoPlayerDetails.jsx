@@ -2,6 +2,7 @@ import './VideoPlayerDetails.scss'
 import eye from '../../../assets/images/Icons/views.svg'
 import like from '../../../assets/images/Icons/likes.svg'
 
+
 function VideoPlayerDetails({currentVideoData}) {
     const {
         title, 
