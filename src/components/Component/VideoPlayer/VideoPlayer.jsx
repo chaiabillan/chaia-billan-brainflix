@@ -1,6 +1,10 @@
 import './VideoPlayer.scss' 
 
 function VideoPlayer({currentVideoData}) {
+    if (!currentVideoData) {
+        return <p>Loading...</p>;
+    }
+    
     const {
         image, 
         duration

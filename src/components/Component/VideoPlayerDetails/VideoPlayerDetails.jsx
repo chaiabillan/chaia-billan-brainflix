@@ -4,6 +4,11 @@ import like from '../../../assets/images/Icons/likes.svg'
 
 
 function VideoPlayerDetails({currentVideoData}) {
+    
+    if (!currentVideoData) {
+        return <p>Loading...</p>;
+    }
+    
     const {
         title, 
         channel, 

@@ -4,45 +4,72 @@ import nextVideoData from '../../data/videos.json'
 import VideoPlayerDetails from '../../components/Component/VideoPlayerDetails/VideoPlayerDetails';
 import VideoPlayerComments from '../../components/Component/VideoPlayerComments/VideoPlayerComments';
 import VideoList from '../../components/Component/VideoNext/VideoNext';
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function HomePage () {
-    const [activeVideo, setActiveVideo] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [videoList, setVideoList] = useState([]);
+    const [activeVideo, setActiveVideo] = useState(); 
+    
+    const [loaded, setLoaded] = useState(false);
+
+    // const api_url = 'https://unit-3-project-api-0a5620414506.herokuapp.com';
+    // const api_key = 'c1b34c15-ee8a-45e3-a5f3-461d51880189';
+
+    const {apiKey, baseURL} = {apiKey:'c1b34c15-ee8a-45e3-a5f3-461d51880189', baseURL: 'https://unit-3-project-api-0a5620414506.herokuapp.com'}
+
 
     useEffect(() => {
-        const fetchVideoData = async() => {
-            const api_url = 'https://unit-3-project-api-0a5620414506.herokuapp.com';
-            const api_key = 'c1b34c15-ee8a-45e3-a5f3-461d51880189';
-            const videos = 'videos';
-            const id = "84e96018-4022-434e-80bf-000ce4cd12b8";
-            // const 
-
+        const fetchVideos = async() => {
             try {
-                const response = await axios.get(`${api_url}/${videos}/${id}?api_key=${api_key}`)
-                console.log(response.data);
-                const data = response.data;
-                setActiveVideo(response.data);
-                // console.log(response); 
-                //need to use a function here...
-                // function updateActiveVideo ( clickedID ) {
-                //     const newActiveVideo = response.find((video) => video.id === clickedID)
-            
-                // setActiveVideo(newActiveVideo);
-                // } 
-                setLoading(false);
+                const allData = await axios.get(`${baseURL}/videos?api_key=${apiKey}`);
+                console.log(allData.data);
+                setVideoList(allData.data);
+                // console.log(videoList);
+                setLoaded(true);
+                return videoList;
+                
             } catch(error) {
                 console.log(error);
-                setLoading(true);
+                setLoaded(false);
+            }
+        }
+        fetchVideos();
+    }, []);
+
+    useEffect(() => {
+        //for the first use effect you dont need specific videos, ids, etc. 
+        console.log(videoList);
+        
+        if (!videoList || videoList.length === 0) {
+            return;
+        } 
+        // if (videoList[0]) {
+        //     const id = videoList[0];
+        // }
+        const defaultVideo = videoList[0].id;
+        console.log(videoList[0].id);
+
+        const fetchVideoData = async() => {
+
+            try {
+                const specificData = await axios.get(`${baseURL}/videos/${defaultVideo}?api_key=${apiKey}`)
+                setActiveVideo(specificData.data);
+                console.log(specificData.data);
+                setLoaded(true);
+            } catch(error) {
+                console.log(error);
+                setLoaded(false);
             }
         }
         fetchVideoData();
-    }, [])
+    }, [loaded, videoList])
 
-    if (loading) {
-        return <p>loading</p>
-    }
+    //make another useEffect that displays the first video only 
+
+    // if (loaded) {
+    //     return <p>Site is loading...</p>
+    // }
     
     // function updateActiveVideo (  ) {
     //     // const newActiveVideo = currentVideoData.find((video) => video.id === clickedID)
@@ -68,26 +95,31 @@ function HomePage () {
 
     return (
         <>
-            < VideoPlayer
-            currentVideoData={activeVideo}
-            />
-            <div className='bottom-half'>
-                <div className='bottom-half__left'>
-                    <VideoPlayerDetails 
-                        currentVideoData={activeVideo}
-                    />
-                    <VideoPlayerComments 
-                        currentVideoData={activeVideo}
-                    />
-                </div>
-                <div className='bottom-half__right'>
-                    <VideoList 
-                        videoList={nextVideoData} 
-                        activeVideo={activeVideo}
-                        updateActiveVideo={setActiveVideo}
-                    />
-                </div>
-            </div>    
+        {loaded && (
+            <>
+                < VideoPlayer
+                currentVideoData={activeVideo}
+                />
+                <div className='bottom-half'>
+                    <div className='bottom-half__left'>
+                        <VideoPlayerDetails 
+                            currentVideoData={activeVideo}
+                        />
+                        <VideoPlayerComments 
+                            currentVideoData={activeVideo}
+                        />
+                    </div>
+                    <div className='bottom-half__right'>
+                        <VideoList 
+                            videoList={videoList} 
+                            activeVideo={activeVideo}
+                            updateActiveVideo={setActiveVideo}
+                        />
+                    </div>
+                </div>  
+            </>  
+        )}
+            
         </>    
     )
 }
