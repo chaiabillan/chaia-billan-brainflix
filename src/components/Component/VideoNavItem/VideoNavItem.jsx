@@ -1,7 +1,7 @@
 import './VideoNavItem.scss';
 import { Link } from 'react-router-dom';
 
-function VideoNavItem ( { video, isActive, updateActiveVideo, isCurrentVideo } ) {
+function VideoNavItem ( { video, isActive, isCurrentVideo } ) {
     
     let className = "video-next__indiv";
     if (isActive) {
@@ -11,14 +11,10 @@ function VideoNavItem ( { video, isActive, updateActiveVideo, isCurrentVideo } )
     if (isCurrentVideo) {
         return null;
     }
-
-    const handleClick = () => {
-        updateActiveVideo(video.id);
-    }
     
     return (
         <Link to ={`/videos/${video.id}`}>
-            <div onClick = {handleClick} className={className}>
+            <div className={className}>
                 <div className="video-next__indiv--image">
                     <img className="video-next__indiv--image--src" src={video.image} alt={video.title} />
                 </div>

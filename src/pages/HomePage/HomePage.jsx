@@ -1,14 +1,18 @@
 import VideoPlayer from '../../components/Component/VideoPlayer/VideoPlayer';
-import currentVideoData from '../../data/video-details.json';
-import nextVideoData from '../../data/videos.json'
+// import currentVideoData from '../../data/video-details.json';
+// import nextVideoData from '../../data/videos.json'
 import VideoPlayerDetails from '../../components/Component/VideoPlayerDetails/VideoPlayerDetails';
 import VideoPlayerComments from '../../components/Component/VideoPlayerComments/VideoPlayerComments';
 import VideoList from '../../components/Component/VideoNext/VideoNext';
 import  { useState, useEffect } from 'react';
 import axios from 'axios';
-import VideoDetails from '../../components/Component/NextVideoDetails/VideoDetails';
+import { useParams } from "react-router-dom"
+
+// import VideoDetails from '../../components/Component/NextVideoDetails/VideoDetails';
 
 function HomePage () {
+    const { videoId } = useParams();
+
     const [videoList, setVideoList] = useState([]);
     const [activeVideo, setActiveVideo] = useState(); 
     const [loaded, setLoaded] = useState(false);
@@ -34,29 +38,22 @@ function HomePage () {
     }, []);
 
     useEffect(() => {
-        //for the first use effect you dont need specific videos, ids, etc. 
         console.log(videoList);
         
         if (!videoList || videoList.length === 0) {
             return;
         } 
-        // if (videoList[0]) {
-        //     const id = videoList[0];
-        // }
-        const defaultVideo = videoList[0].id;
-        console.log(videoList[0].id);
 
+        const activeVideo = videoId || videoList[0].id
+        
         const fetchVideoData = async() => {
 
             try {
-                const specificData = await axios.get(`${baseURL}/videos/${defaultVideo}?api_key=${apiKey}`)
+                const specificData = await axios.get(`${baseURL}/videos/${activeVideo}?api_key=${apiKey}`)
                 setActiveVideo(specificData.data);
                 console.log(specificData.data);
-                
                 setLoaded(true);
-                // console.log(activeVideo);
                 return activeVideo;
-                
             } catch(error) {
                 console.log(error);
                 setLoaded(false);
@@ -64,7 +61,7 @@ function HomePage () {
             
         }
         fetchVideoData();
-    }, [loaded, videoList])
+    }, [videoList, videoId])
 
     //make another useEffect that displays the first video only 
 

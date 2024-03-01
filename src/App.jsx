@@ -11,6 +11,7 @@ import Navbar from './components/Component/Navbar/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import VideoDetails from './components/Component/NextVideoDetails/VideoDetails';
+import VideoUpload from './pages/VideoUpload/VideoUpload';
 
 function App() {
 
@@ -28,8 +29,9 @@ function App() {
         < Navbar />
         <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/videos" element={<HomePage/>} /> 
-            <Route path="/videos/:videoId" element={<VideoDetails />}/>
+            {/* <Route path="/videos" element={<HomePage/>} />  */}
+            <Route path="/videos/:videoId" element={<HomePage />}/>
+            <Route path="/upload" element={<VideoUpload/>}/>
 
             
         </Routes>

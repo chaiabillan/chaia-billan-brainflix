@@ -1,0 +1,98 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins.scss' as *;
+
+* {
+    // border: 0.2px dotted red;
+    box-sizing: border-box;
+}
+
+.form {
+    margin: 16px;
+
+    &__label {
+        font-size: 0.7rem;
+        color: $Silver;
+    }
+
+    &__field {
+        width: 100%;
+        border: 1px $Mercury solid;
+        color: $BrainFlix-Black;
+    }
+}
+
+.top {
+
+    &__title {
+        font-size: 2rem;
+    }
+}
+
+.middle {
+
+    &__thumbnail {
+
+        &--image {
+            width: 100%;
+        }
+    }
+
+    &__inputs {
+        &--title {
+            &--field {
+                width: 100%;
+                border: 1px $Mercury solid;
+                color: $BrainFlix-Black;
+
+            }
+        }
+        &--description {
+            &--field {
+                width: 100%;
+                border: 1px $Mercury solid;
+                color: $BrainFlix-Black;
+            }
+        }
+    }
+}
+
+.bottom {
+    &__cancel1 {
+        display: none;
+    }
+    &__publish {
+        &--button {
+            position: relative; 
+            width: 100%;
+            background-color: $BrainFlix-Blue;
+            display: flex;
+            min-height: 36px;
+            align-items: center;
+            padding: 0 10px; 
+            margin-top: 16px;
+            border-radius: 4px;
+            border: none;
+            color: $White;
+
+            &--icon {
+                height: fit-content;
+                margin-right: 87px; //TEMP FIX NEED TO CENTER - do pos absolute for icon
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+
+    &__cancel2 {
+        display: flex;
+        justify-content: center;
+
+        &--button {
+            // display: flex;
+            background: none;
+            border: none;
+            color: $BrainFlix-Blue;
+            font-size: 0.7rem;
+        }
+    }
+}
