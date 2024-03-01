@@ -30,6 +30,4 @@ function VideoNavItem ( { video, isActive, updateActiveVideo, isCurrentVideo } )
         </Link>
     )
 }
-
-
 export default VideoNavItem

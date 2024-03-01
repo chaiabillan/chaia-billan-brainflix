@@ -56,6 +56,8 @@ function VideoList({ videoList, activeVideo, updateActiveVideo }) {
                                 // isActive={video.id === activeVideo.id}
                                 isActive={activeVideo && video.id === activeVideo.id}
                                 updateActiveVideo={updateActiveVideo}
+                                // updateActiveVideo={activeVideo && video.id === activeVideo.id}
+
                                 // updateActiveVideo={setActiveVideo}
                                 // isCurrentVideo={video.id === activeVideo.id}
                                 isCurrentVideo={activeVideo && video.id === activeVideo.id}

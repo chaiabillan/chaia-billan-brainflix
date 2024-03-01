@@ -2,10 +2,16 @@ import './VideoPlayerComments.scss'
 import comment from '../../../assets/images/Icons/add_comment.svg'
 
 function VideoPlayerComments({currentVideoData}) {
-    if (!currentVideoData) {
+    if (!currentVideoData || !currentVideoData.comments) {
         return <p>Loading...</p>;
     }
-    
+    // if (!videoList) {
+    //     return <p>Loading...</p>;
+    // }
+
+    // const {
+    //     comments
+    // } = videoList;
     const {
         comments
     } = currentVideoData;

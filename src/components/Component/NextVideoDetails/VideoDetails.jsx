@@ -3,11 +3,29 @@ import VideoPlayer from "../VideoPlayer/VideoPlayer";
 import VideoPlayerDetails from "../VideoPlayerDetails/VideoPlayerDetails";
 import VideoList from "../VideoNext/VideoNext";
 import VideoPlayerComments from "../VideoPlayerComments/VideoPlayerComments";
+// import videoList from 
 
-function VideoDetails({ videoList }) {
+function VideoDetails({ videoList, setActiveVideo }) {
     const { videoId } = useParams();
-    const selectedVideo = videoList.find(video => video.id === videoId);
 
+    const videoList1 = videoList;
+
+    console.log(videoList);
+
+    if (!videoList) {
+        return <p>Loading...</p>;
+    }
+    if (!videoList || videoList.length === 0) {
+        return <p>Loading...</p>;
+    }
+    console.log(videoList)
+
+    const selectedVideo = videoList1.filter(video => video.id === videoId);
+    // const selectedVideo = videoList.videoID;
+
+    // console.log(selectedVideo);
+
+    console.log(videoList);
 
     if (!selectedVideo) {
         return <p>Video not found</p>;
@@ -44,7 +62,7 @@ function VideoDetails({ videoList }) {
                             <VideoList 
                                 videoList={videoList} 
                                 activeVideo={selectedVideo}
-                                // updateActiveVideo={setActiveVideo}
+                                updateActiveVideo={setActiveVideo}
                             />
                         </div>
                     </div>  

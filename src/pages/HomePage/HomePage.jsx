@@ -6,16 +6,12 @@ import VideoPlayerComments from '../../components/Component/VideoPlayerComments/
 import VideoList from '../../components/Component/VideoNext/VideoNext';
 import  { useState, useEffect } from 'react';
 import axios from 'axios';
+import VideoDetails from '../../components/Component/NextVideoDetails/VideoDetails';
 
 function HomePage () {
     const [videoList, setVideoList] = useState([]);
     const [activeVideo, setActiveVideo] = useState(); 
-    
     const [loaded, setLoaded] = useState(false);
-
-    // const api_url = 'https://unit-3-project-api-0a5620414506.herokuapp.com';
-    // const api_key = 'c1b34c15-ee8a-45e3-a5f3-461d51880189';
-
     const {apiKey, baseURL} = {apiKey:'c1b34c15-ee8a-45e3-a5f3-461d51880189', baseURL: 'https://unit-3-project-api-0a5620414506.herokuapp.com'}
 
 
@@ -56,11 +52,16 @@ function HomePage () {
                 const specificData = await axios.get(`${baseURL}/videos/${defaultVideo}?api_key=${apiKey}`)
                 setActiveVideo(specificData.data);
                 console.log(specificData.data);
+                
                 setLoaded(true);
+                // console.log(activeVideo);
+                return activeVideo;
+                
             } catch(error) {
                 console.log(error);
                 setLoaded(false);
             }
+            
         }
         fetchVideoData();
     }, [loaded, videoList])
@@ -91,7 +92,8 @@ function HomePage () {
     //what else do we need in the newvideodetails page? 
     //the same return statement as below bc it should have the same UI except the curr vid
 
-
+    console.log(videoList);
+    console.log(activeVideo)
 
     return (
         <>
@@ -117,6 +119,7 @@ function HomePage () {
                         />
                     </div>
                 </div>  
+                {/* <VideoDetails videoList={videoList} /> */}
             </>  
         )}
             

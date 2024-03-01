@@ -12,7 +12,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import VideoDetails from './components/Component/NextVideoDetails/VideoDetails';
 
-
 function App() {
 
   // const [activeVideo, setActiveVideo] = useState(currentVideoData[0]);
@@ -30,7 +29,7 @@ function App() {
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/videos" element={<HomePage/>} /> 
-            <Route path="/videos/:videoId" element={<VideoDetails/>}/>
+            <Route path="/videos/:videoId" element={<VideoDetails />}/>
 
             
         </Routes>
