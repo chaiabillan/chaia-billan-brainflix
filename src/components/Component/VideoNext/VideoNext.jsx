@@ -3,6 +3,11 @@ import './VideoNext.scss'
 
 function VideoList({ videoList, activeVideo, updateActiveVideo }) {
 
+    if (videoList === 0) {
+        return <p>Loading...</p>;
+    }
+    console.log(videoList);
+
     return (
         <section className ="video-next">
             <p className="video-next__title regular">
@@ -15,9 +20,9 @@ function VideoList({ videoList, activeVideo, updateActiveVideo }) {
                                 key={video.id}
                                 video={video}
                                 parentClass="video-next__options"
-                                isActive={video.id === activeVideo.id}
+                                isActive={activeVideo && video.id === activeVideo.id}
                                 updateActiveVideo={updateActiveVideo}
-                                isCurrentVideo={video.id === activeVideo.id}
+                                isCurrentVideo={activeVideo && video.id === activeVideo.id}
                             />
                         );
                     })

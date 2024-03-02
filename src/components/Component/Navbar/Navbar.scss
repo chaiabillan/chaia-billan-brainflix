@@ -12,7 +12,12 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 16px 16px 12px 16px;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+    }
 
     &__middle {
         display: flex;
@@ -26,14 +31,17 @@
             &--box {
                 width: 100%;
                 border-radius: 4px;
-                height: 36px;
-                border: 1px solid $Silver;
+                height: 2.25rem;
+                border: 1px solid $Mercury;
                 padding: 4px;
                 background-repeat: none;
                 background-position: 10px center;
                 background-color: $Alabaster;
                 font-size: 0.7rem;
 
+                &::placeholder {
+                    color: $BrainFlix-Black;
+                }
 
                 &:focus {
                     border: 2px solid $BrainFlix-Blue;
@@ -54,8 +62,8 @@
     
     &__picture1 {
         display: flex;
-        height: 36px;
-        width: 36px;
+        height: 2.25rem;
+        width: 2.25rem;
         background-image: url("../../../assets/images/Mohan-muruge.jpg");
         background-size: cover;
         border-radius: 50%;
@@ -64,8 +72,8 @@
     }
     &__picture2 {
         display: none;
-        height: 36px;
-        width: 36px;
+        height: 2.25rem;
+        width: 2.25rem;
         background-image: url("../../../assets/images/Mohan-muruge.jpg");
         background-size: cover;
         border-radius: 50%;
@@ -78,7 +86,7 @@
             width: 100%;
             background-color: $BrainFlix-Blue;
             display: flex;
-            min-height: 36px;
+            min-height: 2.25rem;
             align-items: center;
             padding: 0 10px; 
             margin-top: 16px;
@@ -87,8 +95,8 @@
             &--icon {
                 height: fit-content;
                 margin-right: 8px; 
-                height: 20px;
-                width: 20px;
+                height: 1.25rem;
+                width: 1.25rem;
             }
 
             &--upload {
@@ -106,7 +114,7 @@
     @include tablet {
         flex-direction: row;
         justify-content: space-between;
-        height: 70px;
+        height: 4.375rem;
 
         &__left {
             display: flex;
@@ -117,15 +125,15 @@
         &__right {
             display: flex;
             flex-direction: row;
-            align-items: end;
+            align-items: flex-end;
             margin-right: 16px;
         }
 
         &__middle {
             &--search {
                 &--box {
-                    height: 40px;
-                    width: 240px;
+                    height: 2.5rem;
+                    width: 15rem;
                 }
             }
         }
@@ -136,9 +144,9 @@
             align-items: flex-end;
             justify-content: space-evenly;
             &--button {
-                width: 150px;
+                width: 9.375rem;
                 margin-right: 16px;
-                height: 40px;
+                height: 2.5rem;
                 margin-left: 16px;
             }
         }
@@ -149,8 +157,8 @@
 
         &__picture2 {
             display: flex;
-            height: 40px;
-            width: 40px;
+            height: 2.5rem;
+            width: 2.5rem;
         }
     }
 
