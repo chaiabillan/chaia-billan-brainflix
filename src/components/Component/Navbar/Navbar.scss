@@ -12,7 +12,12 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 16px 16px 12px 16px;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+    }
 
     &__middle {
         display: flex;
@@ -27,13 +32,16 @@
                 width: 100%;
                 border-radius: 4px;
                 height: 36px;
-                border: 1px solid $Silver;
+                border: 1px solid $Mercury;
                 padding: 4px;
                 background-repeat: none;
                 background-position: 10px center;
                 background-color: $Alabaster;
                 font-size: 0.7rem;
 
+                &::placeholder {
+                    color: $BrainFlix-Black;
+                }
 
                 &:focus {
                     border: 2px solid $BrainFlix-Blue;

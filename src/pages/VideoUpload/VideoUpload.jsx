@@ -7,7 +7,7 @@ function VideoUpload() {
         <>
             <form className='form'>
                 <section className="top">
-                    <h1 className='top__title demi'>Upload Video</h1>
+                    <h1 className='top__title bold'>Upload Video</h1>
                 </section>
                 <section className="middle">
                     <div className='middle__thumbnail'>
@@ -21,13 +21,13 @@ function VideoUpload() {
                         </div>
                         <div className='middle__inputs--description'>
                             <h3 className='form__label demi'>ADD A VIDEO DESCRIPTION</h3>
-                            <textarea className='form__field regular' type="text" name="description" placeholder="Add a description to your video"></textarea>
+                            <textarea className='form__field form__field--description regular' type="text" name="description" placeholder="Add a description to your video"></textarea>
                         </div>
                     </div>
                 </section>
                 <section className="bottom">
                     <div className='bottom__cancel1'> {/*im not sure if we need these divs */}
-                        <button className='bottom__cancel1--button'>cancel for tablet desktop</button>
+                        <button className='bottom__cancel1--button demi'>CANCEL</button>
                     </div>
                     <div className='bottom__publish'>
                         <button className='bottom__publish--button demi'><img className='bottom__publish--button--icon' src={publish}/>PUBLISH</button> 

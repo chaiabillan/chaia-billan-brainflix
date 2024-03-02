@@ -7,28 +7,59 @@
 }
 
 .form {
-    margin: 16px;
+    padding: 0px 16px;
+    border-top: 1px $Mercury solid;
 
     &__label {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         color: $Silver;
+        margin-bottom: 6px;
+        
     }
 
     &__field {
         width: 100%;
         border: 1px $Mercury solid;
         color: $BrainFlix-Black;
+        padding: 10px;
+        background-color: $Alabaster;
+        border-radius: 4px;
+        margin-bottom: 8px;
+
+        &--description {
+            padding-bottom: 40px;
+        }
+
+        &::placeholder {
+            color: $BrainFlix-Black;
+        }
+    }
+
+    @include tablet {
+        padding: 4px 32px ;
+
+    }
+    @include desktop {
+        padding: 4px 128px;
     }
 }
 
 .top {
 
     &__title {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+
+    @include tablet {
+        &__title {
+            font-size: 33px;
+            padding-top: 8px;
+        }
     }
 }
 
 .middle {
+    // padding-top: 24px;
 
     &__thumbnail {
 
@@ -38,6 +69,8 @@
     }
 
     &__inputs {
+        margin-top: 16px;
+        margin-bottom: 20px;
         &--title {
             &--field {
                 width: 100%;
@@ -54,6 +87,45 @@
             }
         }
     }
+
+    @include tablet {
+        border-top: 1px solid $Mercury;
+        border-bottom: 1px solid $Mercury;
+        padding-top: 16px;
+        margin-bottom: 32px;
+
+        &__thumbnail {
+            &--image {
+                width: 50%;
+                min-height: 190px;
+            }
+        }
+
+        &__inputs {
+            margin-bottom: 12px;
+        }
+    }
+
+    @include desktop {
+        display: flex;
+        padding-bottom: 20px;
+
+        &__thumbnail {
+            width: 33%;
+            &--image {
+                width: 100%;
+                min-height: 163px;
+            }
+        }
+
+        &__inputs {
+            width: 77%;
+            padding-left: 32px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            // min-height: 163px;
+        }
+    }
 }
 
 .bottom {
@@ -61,15 +133,17 @@
         display: none;
     }
     &__publish {
+        margin-bottom: 32px;
+
         &--button {
             position: relative; 
             width: 100%;
             background-color: $BrainFlix-Blue;
             display: flex;
-            min-height: 36px;
+            min-height: 40px;
             align-items: center;
             padding: 0 10px; 
-            margin-top: 16px;
+            margin-top: -8px;
             border-radius: 4px;
             border: none;
             color: $White;
@@ -86,13 +160,59 @@
     &__cancel2 {
         display: flex;
         justify-content: center;
+        margin-bottom: 40px;
 
         &--button {
-            // display: flex;
             background: none;
             border: none;
             color: $BrainFlix-Blue;
             font-size: 0.7rem;
+        }
+    }
+
+    @include tablet {
+        display: flex;
+        align-content: center;
+        height: fit-content;
+        justify-content: flex-end;
+
+
+        &__cancel1 {
+            display: flex;
+            // height: 40px;
+            align-items: center;
+            position: relative;
+            bottom: 4px;
+
+
+            &--button {
+                background: none;
+                border: none;
+                color: $BrainFlix-Blue;
+                font-size: 0.7rem;
+                height: fit-content;
+
+            }
+        }
+
+        &__publish {
+            margin-bottom: 0px;
+            margin-left: 64px;
+            display: flex;
+
+            &--button {
+                position: relative;
+                padding: 0px 55px;
+                &--icon {
+                    position: absolute;
+                    right: 50px;
+                }
+            }
+        }
+
+        &__cancel2 {
+            display: none;
+            height: auto;
         }
     }
 }

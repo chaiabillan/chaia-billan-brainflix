@@ -1,14 +1,10 @@
 import VideoPlayer from '../../components/Component/VideoPlayer/VideoPlayer';
-// import currentVideoData from '../../data/video-details.json';
-// import nextVideoData from '../../data/videos.json'
 import VideoPlayerDetails from '../../components/Component/VideoPlayerDetails/VideoPlayerDetails';
 import VideoPlayerComments from '../../components/Component/VideoPlayerComments/VideoPlayerComments';
 import VideoList from '../../components/Component/VideoNext/VideoNext';
 import  { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from "react-router-dom"
-
-// import VideoDetails from '../../components/Component/NextVideoDetails/VideoDetails';
 
 function HomePage () {
     const { videoId } = useParams();
@@ -25,10 +21,8 @@ function HomePage () {
                 const allData = await axios.get(`${baseURL}/videos?api_key=${apiKey}`);
                 console.log(allData.data);
                 setVideoList(allData.data);
-                // console.log(videoList);
                 setLoaded(true);
                 return videoList;
-                
             } catch(error) {
                 console.log(error);
                 setLoaded(false);
@@ -63,35 +57,6 @@ function HomePage () {
         fetchVideoData();
     }, [videoList, videoId])
 
-    //make another useEffect that displays the first video only 
-
-    // if (loaded) {
-    //     return <p>Site is loading...</p>
-    // }
-    
-    // function updateActiveVideo (  ) {
-    //     // const newActiveVideo = currentVideoData.find((video) => video.id === clickedID)
-
-    // setActiveVideo(data);
-    // } 
-
-    // function updateActiveVideo ( clickedID ) {
-    //     const newActiveVideo = currentVideoData.find((video) => video.id === clickedID)
-
-    // setActiveVideo(newActiveVideo);
-    // } //this goes through the array of currentVideoData to find the video with the id of 
-    //the one that was clicked 
-    //i think we should do this in the use params (newvideodetails) page though 
-    //but how do we update the active video here? do we even need to? 
-    //id say that this useeffect could be used in the other page instead but i dont think
-    //i can display the current video without it. i think i need to carry it over from here
-
-    //what else do we need in the newvideodetails page? 
-    //the same return statement as below bc it should have the same UI except the curr vid
-
-    console.log(videoList);
-    console.log(activeVideo)
-
     return (
         <>
         {loaded && (
@@ -116,7 +81,6 @@ function HomePage () {
                         />
                     </div>
                 </div>  
-                {/* <VideoDetails videoList={videoList} /> */}
             </>  
         )}
             
