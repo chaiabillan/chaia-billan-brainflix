@@ -36,8 +36,8 @@
         &--image {
         
             &--src {
-                height: 60px;
-                width: 100px;
+                height: 3.75rem;
+                width: 6.25rem;
                 border-radius: 4px;
             }
         }
@@ -45,14 +45,14 @@
         &--text {
             display: flex;
             flex-direction: column;
-            height: 60px;
+            height: 3.75rem;
             align-items: flex-start; 
             padding-left: 16px;     
             flex: 1;      
 
             &--title {
                 display: flex;
-                font-size: 13px;
+                font-size: 0.8125rem;
                 margin: 0px;
                 justify-content: flex-start;
                 flex-direction: column;
@@ -60,7 +60,7 @@
 
             &--channel {
                 display: flex;
-                font-size: 13px;
+                font-size: 0.8125rem;
                 margin: 0px;
                 margin-top: auto;
                 justify-content: flex-end;
