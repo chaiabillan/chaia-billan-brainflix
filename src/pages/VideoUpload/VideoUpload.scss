@@ -33,6 +33,16 @@
         &::placeholder {
             color: $BrainFlix-Black;
         }
+
+        &:focus {
+            border: 2px solid $BrainFlix-Blue;
+            outline: none;
+        }
+
+        &.error {
+            border: 2px solid red;
+            outline: none;
+        }
     }
 
     @include tablet {
@@ -59,7 +69,6 @@
 }
 
 .middle {
-    // padding-top: 24px;
 
     &__thumbnail {
 
@@ -123,7 +132,6 @@
             padding-left: 32px;
             margin-top: 0px;
             margin-bottom: 0px;
-            // min-height: 163px;
         }
     }
 }
@@ -134,11 +142,12 @@
     }
     &__publish {
         margin-bottom: 32px;
+        position: relative;
 
         &--button {
             position: relative; 
             width: 100%;
-            background-color: $BrainFlix-Blue;
+            background-color: $BrainFlix-DarkBlue;
             display: flex;
             min-height: 40px;
             align-items: center;
@@ -147,12 +156,16 @@
             border-radius: 4px;
             border: none;
             color: $White;
+            text-decoration: none;
+            justify-content: center;
 
             &--icon {
                 height: fit-content;
-                margin-right: 87px; //TEMP FIX NEED TO CENTER - do pos absolute for icon
+                position: absolute;
+                // margin-right: 87px; //TEMP FIX NEED TO CENTER - do pos absolute for icon
                 height: 1.25rem;
                 width: 1.25rem;
+                left: 10px;
             }
         }
     }
@@ -179,7 +192,6 @@
 
         &__cancel1 {
             display: flex;
-            // height: 40px;
             align-items: center;
             position: relative;
             bottom: 4px;

@@ -5,13 +5,7 @@ function VideoPlayerComments({currentVideoData}) {
     if (!currentVideoData || !currentVideoData.comments) {
         return <p>Loading...</p>;
     }
-    // if (!videoList) {
-    //     return <p>Loading...</p>;
-    // }
 
-    // const {
-    //     comments
-    // } = videoList;
     const {
         comments
     } = currentVideoData;
@@ -35,7 +29,7 @@ function VideoPlayerComments({currentVideoData}) {
                             <textarea className="comment__form--field comment__form--field--comment regular" type="text" name="comment" placeholder="Add a new comment"></textarea>
                             
                             <div className="comment__form--button">
-                                <button className="comment__form--button--content demi" type="submit"><img className="comment__form--button--content--icon" src={comment}/>COMMENT</button>
+                                <button className="comment__form--button--content demi" type="submit"><img className="comment__form--button--content--icon" src={comment} alt="comment icon"/>COMMENT</button>
                             </div>
                         </div>
                         <div className="comment__form--bottom">

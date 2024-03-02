@@ -11,9 +11,14 @@ function VideoNavItem ( { video, isActive, isCurrentVideo } ) {
     if (isCurrentVideo) {
         return null;
     }
+
+    const linkStyle = {
+        textDecoration: 'none', 
+        color: 'black' 
+    };
     
     return (
-        <Link to ={`/videos/${video.id}`}>
+        <Link to ={`/videos/${video.id}`} style={linkStyle}>
             <div className={className}>
                 <div className="video-next__indiv--image">
                     <img className="video-next__indiv--image--src" src={video.image} alt={video.title} />

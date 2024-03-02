@@ -1,8 +1,19 @@
 import './VideoUpload.scss'
 import defaultThumbnail from '../../assets/images/Upload-video-preview.jpg'
 import publish from '../../assets/images/Icons/publish.svg'
+import { Link } from 'react-router-dom';
 
 function VideoUpload() {
+
+    const handleClick = () => {
+        alert('Your video has been submitted!');
+    };
+
+    const linkStyle = {
+        textDecoration: 'none', 
+        color: 'black' 
+    };
+
     return (
         <>
             <form className='form'>
@@ -12,7 +23,7 @@ function VideoUpload() {
                 <section className="middle">
                     <div className='middle__thumbnail'>
                         <h3 className='form__label demi'>VIDEO THUMBNAIL</h3>
-                        <img className='middle__thumbnail--image' src={defaultThumbnail}></img>
+                        <img className='middle__thumbnail--image' src={defaultThumbnail} alt="thumbnail"></img>
                     </div>
                     <div className='middle__inputs'>
                         <div className='middle__inputs--title'>
@@ -26,11 +37,11 @@ function VideoUpload() {
                     </div>
                 </section>
                 <section className="bottom">
-                    <div className='bottom__cancel1'> {/*im not sure if we need these divs */}
+                    <div className='bottom__cancel1'> 
                         <button className='bottom__cancel1--button demi'>CANCEL</button>
                     </div>
                     <div className='bottom__publish'>
-                        <button className='bottom__publish--button demi'><img className='bottom__publish--button--icon' src={publish}/>PUBLISH</button> 
+                        <Link to='/' style={linkStyle}><button onClick={handleClick} className='bottom__publish--button demi'><img className='bottom__publish--button--icon' src={publish} alt="publish icon"/>PUBLISH</button></Link>
                     </div>
                     <div className='bottom__cancel2'>
                         <button className='bottom__cancel2--button demi'>CANCEL</button>
