@@ -11,7 +11,9 @@ function HomePage () {
     const [videoList, setVideoList] = useState([]);
     const [activeVideo, setActiveVideo] = useState(); 
     const [loaded, setLoaded] = useState(false);
-    const {apiKey, baseURL} = {apiKey:'c1b34c15-ee8a-45e3-a5f3-461d51880189', baseURL: 'https://unit-3-project-api-0a5620414506.herokuapp.com'}
+    // const {apiKey, baseURL} = {apiKey:'c1b34c15-ee8a-45e3-a5f3-461d51880189', baseURL: 'https://unit-3-project-api-0a5620414506.herokuapp.com'}
+    const {apiKey, baseURL} = {apiKey:'c1b34c15-ee8a-45e3-a5f3-461d51880189', baseURL: 'http://localhost:8080'}
+
 
     //fetch the data from the API with the endpoint /videos
     useEffect(() => {
