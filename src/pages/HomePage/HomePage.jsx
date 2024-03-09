@@ -46,6 +46,8 @@ function HomePage () {
 
             try {
                 const specificData = await axios.get(`${baseURL}/videos/${activeVideo}?api_key=${apiKey}`)
+                // const specificData = await axios.get(`${baseURL}/videos/${videoID}?api_key=${apiKey}`)
+
                 setActiveVideo(specificData.data);
                 console.log(specificData.data);
                 setLoaded(true);
