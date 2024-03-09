@@ -40,16 +40,18 @@ function HomePage () {
             return;
         } 
 
-        const activeVideo = videoId || videoList[0].id
+        const activeVideoID = videoId || videoList[0].id
+        console.log(activeVideoID)
         
         const fetchVideoData = async() => {
 
             try {
-                const specificData = await axios.get(`${baseURL}/videos/${activeVideo}?api_key=${apiKey}`)
+                const specificData = await axios.get(`${baseURL}/videos/${activeVideoID}?api_key=${apiKey}`)
                 // const specificData = await axios.get(`${baseURL}/videos/${videoID}?api_key=${apiKey}`)
+                console.log(specificData);
+                console.log(specificData.data);
 
                 setActiveVideo(specificData.data);
-                console.log(specificData.data);
                 setLoaded(true);
                 return activeVideo;
             } catch(error) {
@@ -64,7 +66,7 @@ function HomePage () {
     //compile the components onto the homepage using the API endpoint data for each specific video
     return (
         <>
-        {loaded && (
+        {/* {loaded && ( */}
             <>
                 < VideoPlayer
                 currentVideoData={activeVideo}
@@ -87,7 +89,7 @@ function HomePage () {
                     </div>
                 </div>  
             </>  
-        )}
+        {/* )} */}
             
         </>    
     )
