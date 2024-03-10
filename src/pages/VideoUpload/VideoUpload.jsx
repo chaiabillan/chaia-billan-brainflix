@@ -1,7 +1,7 @@
 import './VideoUpload.scss'
 import defaultThumbnail from '../../assets/images/Upload-video-preview.jpg'
 import publish from '../../assets/images/Icons/publish.svg'
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,6 +9,10 @@ function VideoUpload() {
     const formRef = useRef();
     const api_url = 'http://localhost:8080/videos'
     const navigate = useNavigate(); 
+
+    useEffect(() => {
+        document.title = 'Upload Page';
+      }, []);
 
     const handleClick = (e) => {
         e.preventDefault();

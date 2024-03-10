@@ -3,11 +3,8 @@ import comment from '../../../assets/images/Icons/add_comment.svg'
 import React, { useRef } from 'react';
 import axios from 'axios';
 
-
-
 function VideoPlayerComments({currentVideoData}) {
     const formRef = useRef(null);
-    // const api_url = 'http://localhost:8080/videos'
 
     if (!currentVideoData || !currentVideoData.comments) {
         return <p>Loading...</p>;
@@ -41,8 +38,6 @@ function VideoPlayerComments({currentVideoData}) {
                     `http://localhost:8080/videos/${currentVideoData.id}/comments`,
                     commentData
                 );                
-                console.log(response)
-
                 formRef.current.reset();
                 return response;
             } catch (error) {
