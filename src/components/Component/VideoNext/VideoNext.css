@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: left;
+}
+
+.video-next {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.video-next__title {
+  color: #AFAFAF;
+}
+.video-next__options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.video-next__indiv {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-bottom: 8px;
+}
+.video-next__indiv--image--src {
+  height: 3.75rem;
+  width: 6.25rem;
+  border-radius: 4px;
+}
+.video-next__indiv--text {
+  display: flex;
+  flex-direction: column;
+  height: 3.75rem;
+  align-items: flex-start;
+  padding-left: 16px;
+  flex: 1;
+  text-decoration: none;
+}
+.video-next__indiv--text--title {
+  display: flex;
+  font-size: 0.8125rem;
+  margin: 0px;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.video-next__indiv--text--title:link {
+  color: black;
+}
+.video-next__indiv--text--channel {
+  display: flex;
+  font-size: 0.8125rem;
+  margin: 0px;
+  margin-top: auto;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+@media (min-width: 1280px) {
+  .video-next__indiv {
+    padding-bottom: 24px;
+  }
+}/*# sourceMappingURL=VideoNext.css.map */

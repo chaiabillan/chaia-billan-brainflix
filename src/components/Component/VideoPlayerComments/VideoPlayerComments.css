@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+}
+
+#add-comment-form-errors {
+  height: 1rem;
+  margin: 0px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px #E1E1E1 solid;
+  margin: 0px 16px 0px 16px;
+}
+.comment--posted {
+  padding-bottom: 16px;
+}
+.comment__picture {
+  padding-right: 16px;
+}
+.comment__picture--icon {
+  display: block;
+  height: 2.25rem;
+  width: 2.25rem;
+  background-color: #E1E1E1;
+  border-radius: 50%;
+  position: relative;
+  top: 21px;
+}
+.comment__picture--icon--mohan {
+  background-image: url("../../../assets/images/Mohan-muruge.jpg");
+  background-size: cover;
+}
+.comment__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.comment__form--label {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  color: #AFAFAF;
+}
+.comment__form--field {
+  border: 1px solid #E1E1E1;
+  color: #323232;
+  padding: 9px;
+  margin-bottom: 16px;
+  background-color: #FAFAFA;
+  border-radius: 4px;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  width: 100%;
+}
+.comment__form--field::-moz-placeholder {
+  color: #000000;
+  opacity: 1;
+}
+.comment__form--field::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+.comment__form--field:focus {
+  border: 2px solid #0095FF;
+  outline: none;
+}
+.comment__form--field.error {
+  border: 2px solid red;
+  outline: none;
+}
+.comment__form--field--comment {
+  padding-bottom: 50px;
+  margin-bottom: 0px;
+}
+.comment__form--button--content {
+  position: relative;
+  width: 100%;
+  background-color: #0095FF;
+  display: flex;
+  min-height: 2.25rem;
+  align-items: center;
+  padding: 0 10px;
+  margin-top: 16px;
+  border-radius: 4px;
+  border: none;
+  color: #FFFFFF;
+}
+.comment__form--button--content--icon {
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-right: 50px;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.comment__form--bottom {
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.comment__form--bottom--error {
+  display: flex;
+  width: 50%;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+}
+.comment__form--bottom--clear {
+  display: flex;
+  width: 50%;
+  margin: 0px;
+  justify-content: flex-end;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  color: #AFAFAF;
+  border: none;
+  background-color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .comment {
+    padding: 16px 0px 0px 0px;
+    margin-right: 32px;
+    margin-left: 32px;
+  }
+  .comment--posted {
+    padding-bottom: 16px;
+  }
+  .comment__picture--icon {
+    height: 3rem;
+    width: 3rem;
+  }
+  .comment__form {
+    padding-top: 6px;
+  }
+  .comment__form--label {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+  .comment__form--field {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    margin-right: 24px;
+  }
+  .comment__form--field--comment {
+    padding-bottom: 0px;
+    height: 2.8125rem;
+  }
+  .comment__form--field--tablet {
+    display: flex;
+  }
+  .comment__form--button {
+    display: flex;
+  }
+  .comment__form--button--content {
+    width: auto;
+    flex-grow: 1;
+    font-size: 0.75rem;
+    padding-right: 10px;
+    position: relative;
+    margin-top: 0px;
+  }
+  .comment__form--button--content--icon {
+    height: 1.125rem;
+    width: 1.125rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comment {
+    padding: 16px 0px 0px 0px;
+    margin-right: 0px;
+  }
+  .comment--posted {
+    padding-bottom: 16px;
+  }
+  .comment__form {
+    padding-right: 32px;
+  }
+  .comment__form--button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .comment__form--content {
+    width: 35%;
+  }
+}
+
+.posts {
+  display: flex;
+}
+.posts__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #323232;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+.posts__info--name {
+  margin-bottom: 5px;
+}
+.posts__info--date {
+  color: #AFAFAF;
+  margin-bottom: 5px;
+}
+.posts__content {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+.posts__content--inside {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+@media (min-width: 768px) {
+  .posts {
+    padding-bottom: 27px;
+  }
+  .posts__info {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+  .posts__content {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}/*# sourceMappingURL=VideoPlayerComments.css.map */
