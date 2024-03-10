@@ -20,7 +20,7 @@ function HomePage () {
         const fetchVideos = async() => {
             try {
                 const allData = await axios.get(`${baseURL}/videos?api_key=${apiKey}`);
-                console.log(allData.data);
+                // console.log(allData.data);
                 setVideoList(allData.data);
                 setLoaded(true);
                 return videoList;
@@ -34,22 +34,22 @@ function HomePage () {
 
     //fetch data from the API using the video's IDs as the endpoint 
     useEffect(() => {
-        console.log(videoList);
+        // console.log(videoList);
         
         if (!videoList || videoList.length === 0) {
             return;
         } 
 
         const activeVideo = videoId || videoList[0].id
-        console.log(activeVideo)
+        // console.log(activeVideo)
         
         const fetchVideoData = async() => {
 
             try {
                 const specificData = await axios.get(`${baseURL}/videos/${activeVideo}?api_key=${apiKey}`)
                 // const specificData = await axios.get(`${baseURL}/videos/${videoID}?api_key=${apiKey}`)
-                console.log(specificData);
-                console.log(specificData.data);
+                // console.log(specificData);
+                // console.log(specificData.data);
 
                 setActiveVideo(specificData.data);
                 setLoaded(true);

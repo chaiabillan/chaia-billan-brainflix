@@ -6,7 +6,7 @@ function VideoList({ videoList, activeVideo, updateActiveVideo }) {
     if (videoList === 0) {
         return <p>Loading...</p>;
     }
-    console.log(videoList);
+    // console.log(videoList);
 
     return (
         <section className ="video-next">
