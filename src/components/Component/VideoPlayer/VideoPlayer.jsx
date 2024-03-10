@@ -5,16 +5,16 @@ function VideoPlayer({currentVideoData}) {
         return <p>Loading...</p>;
     }
     
+    // retrieve the image data from the server
     const {
         image
-        // duration
     } = currentVideoData;
 
 
+    // display the poster image of the video in the video player component
     return (
         <section className="video-player">
             <video className="video-player__image" poster={image} controls></video>
-            {/* <div>{duration}</div> */}
         </section>
     )
 }

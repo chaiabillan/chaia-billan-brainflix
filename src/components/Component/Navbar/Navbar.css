@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  src: url("../../assets/fonts/Alternative%20files/AvenirNextLTPro.ttf") format(); /* Use URL encoding for spaces */
+  font-weight: 400;
+}
+.regular {
+  font-family: "Avenir Next";
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  src: url("../../assets/fonts/Alternative%20files/AvenirNextLTProDemi.ttf") format();
+  font-weight: 600;
+}
+.demi {
+  font-family: "Avenir Next";
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  src: url("../../assets/fonts/Alternative%20files/AvenirNextLTProBold.ttf") format();
+  font-weight: 700;
+}
+.bold {
+  font-family: "Avenir Next";
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.nav-bar {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 12px 16px;
+}
+.nav-bar__logo {
+  display: flex;
+  justify-content: center;
+}
+.nav-bar__middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.nav-bar__middle--search {
+  width: 100%;
+}
+.nav-bar__middle--search--box {
+  width: 100%;
+  border-radius: 4px;
+  height: 2.25rem;
+  border: 1px solid #E1E1E1;
+  padding: 4px;
+  background-repeat: none;
+  background-position: 10px center;
+  background-color: #FAFAFA;
+  font-size: 0.7rem;
+}
+.nav-bar__middle--search--box::-moz-placeholder {
+  color: #323232;
+}
+.nav-bar__middle--search--box::placeholder {
+  color: #323232;
+}
+.nav-bar__middle--search--box:focus {
+  border: 2px solid #0095FF;
+  outline: none;
+}
+.nav-bar__middle--search--box.error {
+  border: 2px solid red;
+  outline: none;
+}
+.nav-bar__middle--search--picture {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.nav-bar__picture1 {
+  display: flex;
+  height: 2.25rem;
+  width: 2.25rem;
+  background-image: url("../../../assets/images/Mohan-muruge.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  margin-left: 16px;
+}
+.nav-bar__picture2 {
+  display: none;
+  height: 2.25rem;
+  width: 2.25rem;
+  background-image: url("../../../assets/images/Mohan-muruge.jpg");
+  background-size: cover;
+  border-radius: 50%;
+}
+.nav-bar__bottom--button {
+  position: relative;
+  width: 100%;
+  background-color: #0095FF;
+  display: flex;
+  min-height: 2.25rem;
+  align-items: center;
+  padding: 0 10px;
+  margin-top: 16px;
+  border-radius: 4px;
+}
+.nav-bar__bottom--button--icon {
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-right: 8px;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.nav-bar__bottom--button--upload {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #FFFFFF;
+  font-size: 0.8rem;
+}
+@media (min-width: 768px) {
+  .nav-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 4.375rem;
+  }
+  .nav-bar__left {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+  }
+  .nav-bar__right {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-right: 16px;
+  }
+  .nav-bar__middle--search--box {
+    height: 2.5rem;
+    width: 15rem;
+  }
+  .nav-bar__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-evenly;
+  }
+  .nav-bar__bottom--button {
+    width: 9.375rem;
+    margin-right: 16px;
+    height: 2.5rem;
+    margin-left: 16px;
+  }
+  .nav-bar__picture1 {
+    display: none;
+  }
+  .nav-bar__picture2 {
+    display: flex;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .nav-bar__bottom--button {
+    margin-left: 32px;
+    margin-right: 40px;
+  }
+}/*# sourceMappingURL=Navbar.css.map */

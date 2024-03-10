@@ -3,10 +3,10 @@ import './VideoNext.scss'
 
 function VideoList({ videoList, activeVideo, updateActiveVideo }) {
 
+    // if the videoList is empty, return a loading message
     if (videoList === 0) {
         return <p>Loading...</p>;
     }
-    console.log(videoList);
 
     return (
         <section className ="video-next">
@@ -14,6 +14,7 @@ function VideoList({ videoList, activeVideo, updateActiveVideo }) {
                 NEXT VIDEOS
             </p>
             <div className="video-next__options">
+                {/* map through the videos from the server and create a list composed of several nav items */}
                 {videoList.map((video) => {
                         return (
                             <VideoNavItem

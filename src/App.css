@@ -1,0 +1,19 @@
+
+.bottom-half {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1280px) {
+  .bottom-half {
+    flex-direction: row;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .bottom-half__left {
+    width: 75%;
+    border-right: 1px solid #E1E1E1;
+  }
+  .bottom-half__right {
+    width: auto;
+  }
+}

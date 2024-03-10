@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+.video-details {
+  padding: 16px;
+}
+.video-details__title--text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 0px;
+  padding-bottom: 16px;
+}
+.video-details__info {
+  display: flex;
+  border-top: 1px #E1E1E1 solid;
+  border-bottom: 1px #E1E1E1 solid;
+  padding: 16px 0px 16px 0px;
+}
+.video-details__info--left {
+  padding-right: 32px;
+}
+.video-details__info--left--channel {
+  font-size: 0.875rem;
+  margin: 0px;
+  padding-bottom: 12px;
+}
+.video-details__info--left--date {
+  font-size: 0.875rem;
+  margin: 0px;
+  color: #AFAFAF;
+}
+.video-details__info--right--views {
+  font-size: 0.875rem;
+  color: #AFAFAF;
+  padding-bottom: 12px;
+  display: flex;
+}
+.video-details__info--right--views--icon {
+  padding-right: 8px;
+}
+.video-details__info--right--likes {
+  font-size: 0.875rem;
+  color: #AFAFAF;
+  display: flex;
+}
+.video-details__info--right--likes--icon {
+  padding-right: 8px;
+}
+.video-details__description {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  padding-top: 16px;
+}
+@media (min-width: 768px) {
+  .video-details {
+    padding: 32px;
+  }
+  .video-details__title--text {
+    font-size: 2.0625rem;
+    line-height: 2.75rem;
+  }
+  .video-details__info {
+    justify-content: space-between;
+    border-top: none;
+    padding: 0px;
+  }
+  .video-details__info--left {
+    display: flex;
+  }
+  .video-details__info--left--channel {
+    padding-right: 32px;
+  }
+  .video-details__info--right {
+    display: flex;
+  }
+  .video-details__info--right--views {
+    padding-right: 32px;
+  }
+  .video-details__info--right--likes--icon {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .video-details__description {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@media (min-width: 1280px) {
+  .video-details {
+    padding: 32px 0px 32px 32px;
+  }
+  .video-details__title {
+    padding-right: 32px;
+  }
+  .video-details__info {
+    padding-right: 32px;
+  }
+  .video-details__description {
+    padding-right: 32px;
+  }
+}/*# sourceMappingURL=VideoPlayerDetails.css.map */
